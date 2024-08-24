@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <!-- #Añadir metadatos mas tarde -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./IMG/google_icon.ico" type="image/x-ico">
+        
+        <title>Google Search Clone lml</title>
+        
+        <link rel="stylesheet" href="../CSS/imageSource.css"
+    </head>
+    <body>
+        <header>
+            <nav>
+                <!-- <a href="./views/imageSource.html" class="images">Images</a>
+                <a href="./views/advanceSearch.html" class="advanced">Advanced</a> -->
+            </nav> 
+        </header>
+        
+        <main>
+            <img class="g-logo" src="../IMG/googlelogo.png" alt="Google logo">
+            <form action="https://www.google.com.mx/search">
+                <div class="text-search">
+                    <img class="glass" src="../IMG/searching-magnifying-glass_icon.ico" alt="magnifying glass">
+                    <input class="text-input" type="text" name="q">
+                    <input type="hidden" name="udm" value="2">
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Google Search">
+                    <input type="submit" value="I'm Feeling Lucky">  
+                </div>
+                
+            </form>      
+        </main>
+        
+    </body>
 </html>
