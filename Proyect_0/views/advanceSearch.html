@@ -3,9 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Advance Search</title>
+
+    <link rel="stylesheet" href="../CSS/advanceSource.css">
 </head>
 <body>
-    
+    <header>
+        <img src="../IMG/googleImageslogo.png" alt="Google icon|">
+        <span>Adavance search</span>
+        <a href="../index.html">go back</a>
+    </header>
+    <main>
+        <form action="https://www.google.com/search">
+                <div class="column uno">
+                    <span style="font-size: 16px;
+                            margin-bottom: 10px;">
+                            Show pages containing...
+                    </span>
+                    <span>
+                        all these words:        
+                    </span>
+                    <span>
+                        this exact word or phrase:
+                    </span>
+                    <span>
+                        any of these words:
+                    </span>
+                    <span>
+                        none of these words:
+                    </span>
+                </div>
+                <div class="column dos">
+                    <span class="space"></span>
+                    <input type="text" name="as_q">
+                    <input type="text" name="as_epq">
+                    <input type="text" name="as_oq">
+                    <input type="text" name="as_eq">
+                    <input id="submit" type="submit" value="Advanced search">
+                </div>
+                <div class="column tres">
+                    <span  style="font-size: 13px; 
+                            font-weight: 600;
+                            margin: 8px 0 23px 0;" 
+                            class="text responsive">
+                        To do this in the search box
+                    </span>
+                    <span class="text responsive two">
+                        Enter the important words: <span class="font-2">Tricolor Mouse Terrier.</span>
+                    </span>
+                    <span class="text responsive two">
+                        Enter the exact words in quotes: <span class="font-2">"Mouse Terrier"</span>  
+                    </span>
+                    <span class="text responsive two">
+                        Enter OR between the words you want: <span class="font-2">Thumbnail OR Standard </span> 
+                    </span>
+                    <span class="text responsive two">
+                        Enter a minus sign just in front of the words you do not want to appear: <span class="font-2">-Rodent, -"Jack Russell" .</span> 
+                    </span>
+                </div>
+            </div>
+        </form>
+    </main>
 </body>
 </html>

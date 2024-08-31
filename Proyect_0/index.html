@@ -22,16 +22,34 @@
             <img class="g-logo" src="./IMG/googlelogo.png" alt="Google logo">
             <form action="https://www.google.com/search">
                 <div class="text-search">
-                    <img class="glass" src="./IMG/searching-magnifying-glass_icon.ico" alt="magnifying glass">
-                    <input class="text-input" type="text" name="q">
+                    <img class="glass" src="./IMG/searching-magnifying-glass_icon.png" alt="magnifying glass">
+                    <input id="queryInput" class="text-input" type="text" name="q">
                 </div>
                 <div class="submit">
-                    <input type="submit" value="Google Search">
-                    <input type="submit" value="I'm Feeling Lucky">  
+                    <input class="btn-search" type="submit" value="Google Search">
+                    <button  onclick="LuckySearch(event)" class="btn-search">Im Feeling Lucky</button>
                 </div>
-                
-            </form>      
+            </form>     
         </main>
+        <script>
+            function LuckySearch (evt) {
+                evt.preventDefault()
+                bool = event.cancelable
+                console.log(bool)
+                let query = document.getElementById('queryInput').value;
+    
+        
+                fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyDz_ERIUYbA2sgiZZdxWdv5ipGppwNxdAg&cx=76b0c71d3f29a49e1&q=${query}&num=1`)
+                .then(res => res.json())
+                .then(data => {
+                  const { items } = data
+                  const { link } = items[0]
+                  console.log(link)
+                  window.location.href = link
+                 })
+            }
+    
+        </script>
         
     </body>
 </html>
